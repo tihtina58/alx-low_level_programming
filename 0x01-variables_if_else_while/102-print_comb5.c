@@ -16,9 +16,11 @@ for (k = i; k <= '9'; k++)
 {
 for (l = j+1; l <= '9'; l++)
 {
-putchar(ij);
+putchar(i);
+putchar(j);
 putchar(' ');
-putchar(kl);
+putchar(k);
+putchar(l);
 if ( i != '9' && j != '8' && k != '9' && l != '9')
 {
 putchar(',');
