@@ -3,7 +3,7 @@
 /**
  *main -3 digit
  *
- *return: 0
+ *return: Assume 0 (Success)
  */
 int main(void)
 {
