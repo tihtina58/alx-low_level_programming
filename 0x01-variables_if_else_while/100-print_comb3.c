@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-/** 
- *main - 2 digit combination
+/**
+ *main - two digit
  *
- *Return :0
+ *Return: Always 0 (Sucess)
  */
 int main(void)
 {
-int i,j;
+int i, j;
 for (i = '0'; i <= '9'; i++)
 {
 for (j = i + 1; j <= '9'; j++)
@@ -21,5 +21,6 @@ putchar(' ');
 }
 }
 }
+putchar('\n');
 return (0);
 }
