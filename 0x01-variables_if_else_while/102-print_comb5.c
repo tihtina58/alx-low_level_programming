@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - print two two digit numbers 
+ * main - print two two digit numbers 
  *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,11 +16,11 @@ for (k = '0'; k <= '9'; k++)
 {
 for (l = '0'; l <= '9'; l++)
 {
-if (j > l)
+if (j >= l)
 {
 continue;
 }
-if(i == '0' && j == '0' && k == '0' && l == '0')
+if (i == '0' && j == '0' && k == '0' && l == '0')
 {
 continue;
 }
