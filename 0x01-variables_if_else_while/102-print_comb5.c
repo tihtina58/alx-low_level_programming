@@ -16,11 +16,11 @@ for (k = '0'; k <= '9'; k++)
 {
 for (l = '0'; l <= '9'; l++)
 {
-putchar((i % 10) + '0');
-putchar((j % 10) + '0');
+putchar(i);
+putchar(j);
 putchar(' ');
-putchar((k % 10) + '0');
-putchar((l % 10) + '0');
+putchar(k);
+putchar(l);
 if (i != '9' || j != '8' || k != '9' || l != '9')
 {
 putchar(',');
