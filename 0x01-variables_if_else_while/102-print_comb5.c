@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - all possible combinations of two tow digits 
+ *main - print two two digit combination 
  *
  * Return: Always 0 (Success)
  */
