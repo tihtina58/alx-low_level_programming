@@ -16,6 +16,10 @@ for (k = '0'; k <= '9'; k++)
 {
 for (l = '0'; l <= '9'; l++)
 {
+if (j >= l)
+{
+continue;
+}
 putchar(i);
 putchar(j);
 putchar(' ');
