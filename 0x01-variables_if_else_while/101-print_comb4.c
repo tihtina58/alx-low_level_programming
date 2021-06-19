@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main -3 digit
+ *main - three digit combination
  *
- *return: Assume 0 (Success)
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
