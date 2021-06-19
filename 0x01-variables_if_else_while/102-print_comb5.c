@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print two two digit numbers 
+ *main _ all possible combinations of two tow digits 
  *
  * Return: Always 0 (Success)
  */
@@ -16,19 +16,11 @@ for (k = '0'; k <= '9'; k++)
 {
 for (l = '0'; l <= '9'; l++)
 {
-if (j >= l)
-{
-continue;
-}
-if (i == '0' && j == '0' && k == '0' && l == '0')
-{
-continue;
-}
-putchar(i);
-putchar(j);
+putchar((i % 10) + '0');
+putchar((j % 10) + '0');
 putchar(' ');
-putchar(k);
-putchar(l);
+putchar((k % 10) + '0');
+putchar((l % 10) + '0');
 if (i != '9' || j != '8' || k != '9' || l != '9')
 {
 putchar(',');
