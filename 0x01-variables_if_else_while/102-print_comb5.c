@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main _ all possible combinations of two tow digits 
+ *main - all possible combinations of two tow digits 
  *
  * Return: Always 0 (Success)
  */
@@ -24,5 +24,6 @@ putchar(' ');
 }
 }
 }
+putchar('\n');
 return (0);
 }
