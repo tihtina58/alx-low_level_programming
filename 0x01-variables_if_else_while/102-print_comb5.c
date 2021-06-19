@@ -20,6 +20,10 @@ if (j > l)
 {
 continue;
 }
+if(i = '0' && j = '0' && k = '0' && l = '0')
+{
+continue;
+}
 putchar(i);
 putchar(j);
 putchar(' ');
@@ -29,7 +33,6 @@ if (i != '9' || j != '8' || k != '9' || l != '9')
 {
 putchar(',');
 putchar(' ');
-break;
 }
 }
 }
