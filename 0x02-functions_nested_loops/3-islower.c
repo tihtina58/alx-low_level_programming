@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for the ALX school students
+ * _islower - return 1 if lower case else 0
  * @c: integer to be tested
  * Return: Always 0
  */
