@@ -9,7 +9,7 @@
 int main(void)
 {
 char a[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
-int i;
+unsigned int i;
 for (i=0; i < sizeof(a); i++)
 {
 _putchar(a[i]);
