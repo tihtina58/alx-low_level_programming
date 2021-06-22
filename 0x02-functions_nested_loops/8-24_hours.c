@@ -1,8 +1,6 @@
 #include "holberton.h"
 /**
- * main - print time
- *
- * Return: none
+ * jack_bauer - print time
  */
 void jack_bauer(void)
 {

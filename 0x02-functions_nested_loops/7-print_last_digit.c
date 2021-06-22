@@ -1,12 +1,24 @@
 #include "holberton.h"
 
 /**
- * main - print last digit
+ * print_last_digit - print last digit
  *
  * Return: the last digit
  */
-int print_last_digit(int c)
+int _abs(int n)
 {
-c = c % 10;
-return (c);
+if (n >= 0)
+{
+return (n);
+}
+else
+{
+return (-1 * n);
+}
+}
+int print_last_digit(int n)
+{
+n = _abs((n % 10));
+_putchar(n + 48);
+return (n);
 }

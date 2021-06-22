@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - addition
+ * add - addition
  *
  * Return: sum
  */

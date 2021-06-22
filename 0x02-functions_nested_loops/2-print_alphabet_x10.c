@@ -1,10 +1,7 @@
 #include "holberton.h"
 
-
 /**
- * main - print a-z ten times
- *
- * Return: Always 0
+ * print_alphabet_x10 - prints alphabet ten times
  */
 void print_alphabet_x10(void)
 {
