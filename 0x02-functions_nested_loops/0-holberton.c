@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
  * main - print holberton
@@ -8,5 +8,12 @@
 
 int main(void)
 {
-printf("Holberton");
+char a[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+int i;
+for (i=0; i < sizeof(a); i++)
+{
+_putchar(a[i]);
+}
+_putchar('\n');
+return (0);
 }
