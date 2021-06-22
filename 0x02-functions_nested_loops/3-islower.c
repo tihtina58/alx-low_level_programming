@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * islower - checks lower case
+ * main - check the code for the ALX school students
+ *
+ * Return: Always 0
  */
 int _islower(int c)
 {
