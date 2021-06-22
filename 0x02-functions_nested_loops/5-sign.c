@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * printsign - display signs
+ * print_sign - display signs
+ * @n: integer to be checked
+ * Return: 1, 0 or -1
  */
 int print_sign(int n)
 {

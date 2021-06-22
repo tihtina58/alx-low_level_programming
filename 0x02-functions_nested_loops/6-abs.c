@@ -2,6 +2,8 @@
 
 /**
  * abs - compute abs
+ * @a: integer to be tested
+ * Return: abs value
  */
 int _abs(int a)
 {

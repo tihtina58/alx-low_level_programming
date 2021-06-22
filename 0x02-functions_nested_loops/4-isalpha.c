@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * isalpha - checks if its a letter
+ * _isalpha - checks if its a letter
+ * @c: integer to be tested
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
