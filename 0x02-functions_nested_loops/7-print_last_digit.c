@@ -1,9 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - print last digit
- *
- * Return: the last digit
+ * printlastdigit - print last digit
  */
 int _abs(int n)
 {

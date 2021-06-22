@@ -1,9 +1,7 @@
 #include "holberton.h"
 /**
- * add - addition
- *
- * Return: sum
- */
+ * add - adds a and b
+*/
 int add(int a, int b)
 {
 return (a + b);

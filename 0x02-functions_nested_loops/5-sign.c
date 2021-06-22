@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_sign - display signs
+ * printsign - display signs
  */
 int print_sign(int n)
 {
