@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * printto98 - print
+ * print_to_98 - print
  */
 void print_to_98(int n)
 {
@@ -9,7 +9,7 @@ if (n <= 98)
 {
 for (i = n; i <= 98; i++)
 {
-_putchar(i + 48);
+_putchar(i);
 if (i != 98)
 {
 _putchar(',');
@@ -20,7 +20,8 @@ _putchar(' ');
 else
 {
 for (i = n; i >= 98; i--)
-_putchar(i + 48);
+  i = (char) (i);
+_putchar(i);
 if (i != 98)
 {
 _putchar(',');

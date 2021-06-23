@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * abs - compute abs
+ * _abs - compute abs
  * @a: integer to be tested
  * Return: abs value
  */
@@ -13,6 +13,7 @@ return (a);
 }
 else
 {
-return (-1 * a);  
+a = a * -1;
+return (a);  
 }
 }

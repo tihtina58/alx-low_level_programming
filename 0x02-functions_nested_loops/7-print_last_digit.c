@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - print last digit
- * _abs : absolute value of a number
+ * _abs - absolute value of a number
  * @n: integer to be tested
- * Return: _abs return abs value the other other
+ * Return: return abs value
  */
 int _abs(int n)
 {
@@ -17,6 +16,11 @@ else
 return (-1 * n);
 }
 }
+/**
+ * print_last_digit - prints the last digit
+ * @n: integer to be tested
+ * Return: the last digit
+ */
 int print_last_digit(int n)
 {
 n = _abs((n % 10));
