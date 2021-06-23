@@ -1,50 +1,59 @@
 #include <stdio.h>
-#include "holberton.h"
 /**
- * main - print the first 98 numbers
- *
- * Return: none
+ * numLength - return length of string
+ * @num: integer to be tested
+ * Return: number of digit
+ */
+int numLength(int num)
+{
+int length = 0;
+if (!num)
+{
+return (1);
+}
+while (num)
+{
+num = num / 10;
+length += 1;
+}
+return length;
+}
+/**
+ * main - prints the first 98 sequences
+ * Return: 0
  */
 int main(void)
 {
-int count;
-unsigned long x, y, z, a, b, c, carry;
-x = 0;
-y = 1;
-for (count = 1; count <= 90; count++)
+unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f10 = 0, f20 = 0, tmp0 = 0;
+short int i = 1, initial0s;
+while (i <= 98)
 {
-z = x + y;
-x = y;
-y = z;
-printf("%lu, ", z);
+if (f10 > 0)
+{
+printf("%lu", f10);
 }
-a = x % 1000;
-x = x / 1000;
-b = y % 1000;
-y = y / 1000;
-while (count <= 98)
+initial0s = numLength(mx) - 1 - numLength(f1);
+while (f10 > 0 && initial0s > 0)
 {
-carry = (a + b) / 1000;
-c = (a + b)-carry * 1000;
-z = (x + y)+carry;
-x = y;
-y = z;
-a = b;
-b = c;
-if (c >= 1000)
-{
-printf("%lu%lu", z, c);
+printf("%i", 0);
+initial0s--;
 }
-else
-{
-printf("%lu0%lu", z, c);
-}
-if (count < 98)
+printf("%lu", f1);
+tmp = (f1 + f2) % mx;
+tmp0 = f10 + f20 + (f1 + f2) / mx;
+f1 = f2;
+f10 = f20;
+f2 = tmp;
+f20 = tmp0;
+if (i != 98)
 {
 printf(", ");
 }
-count++;
+else
+{
+printf("\n");
 }
-putchar('\n');
+i++;
+}
 return (0);
 }
