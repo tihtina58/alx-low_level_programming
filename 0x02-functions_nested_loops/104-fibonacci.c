@@ -16,7 +16,7 @@ while (num)
 num = num / 10;
 length += 1;
 }
-return length;
+return (length);
 }
 /**
  * main - prints the first 98 sequences

@@ -6,27 +6,26 @@
  */
 int main(void)
 {
-int i, n;
-long f1, f2, next;
-f1 = 1;
-f2 = 2;
-n = 50;
-for (i = 0; i < n; i++)
+int i = 0;
+long k = 2, j = 1;
+while (i < 50)
 {
-if (i == 49)
+if (i == 0)
 {
-_putchar(f1 + 48);
+printf("%ld", j);
+}
+else if (i == 1)
+{
+printf(", %ld", k);
 }
 else
 {
-_putchar(f1 + 48);
-_putchar(',');
-_putchar(' ');
-next = f1 + f2;
-f1 = f2;
-f2 = next;
+k += j;
+j = k - j;
+printf(", %ld", k);
 }
+++i;
 }
-_putchar('\n');
+printf("\n");
 return (0);
 }
