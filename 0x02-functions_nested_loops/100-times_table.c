@@ -6,7 +6,7 @@
 void print_times_table(int n)
 {
 int i, j, pro;
-if (!(n > 15 || n < 0))
+if (n <= 15 && n >= 0))
 {
 for (i = 0; i <= n; i++)
 {
@@ -20,15 +20,25 @@ continue;
 }
 _putchar(',');
 _putchar(' ');
-if (pro >= 10)
+if (pro >= 10 && pro < 100)
 {
 _putchar(pro / 10 + 48);
 _putchar(pro % 10 + 48);
 }
+else if (pro < 10 && x != 0)
+{
+_putchar((pro % 10) + 48);
+}
+else if (pro >= 100 && x != 0)
+{
+_putchar((pro / 100) + 48);
+_putchar((pro / 10) % 10 + 48);
+_putchar((pro % 10) + 48);
+}
 else
 {
 _putchar(' ');
-_putchar(pro + 48);
+_putchar((pro % 10) + 48);
 }
 }
 _putchar('\n');
