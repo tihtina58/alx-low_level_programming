@@ -14,6 +14,6 @@ return (a);
 else
 {
 a = a * -1;
-return (a);  
+return (a);
 }
 }
