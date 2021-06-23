@@ -32,4 +32,5 @@ _putchar(' ');
 }
 }
 }
+printf("\n");
 }
