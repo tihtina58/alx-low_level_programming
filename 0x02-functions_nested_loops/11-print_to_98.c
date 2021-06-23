@@ -11,7 +11,7 @@ if (n <= 98)
 {
 for (i = n; i <= 98; i++)
 {
-_putchar(i);
+_putchar(i + 48);
 if (i != 98)
 {
 _putchar(',');
@@ -23,7 +23,7 @@ else
 {
 for (i = n; i >= 98; i--)
 {
-_putchar(i);
+_putchar(i + 48);
 if (i != 98)
 {
 _putchar(',');
