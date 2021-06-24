@@ -1,4 +1,4 @@
-#include "holberton.c"
+#include "holberton.h"
 /**
  * print_line - prints underscore
  * @n: integer to be tested
