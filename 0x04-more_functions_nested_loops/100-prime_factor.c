@@ -23,8 +23,8 @@ i = i / n;
 }
 if (i > 2)
 {
-powax = n;
+max = i;
 }
-printf(max);
+printf("%lu\n", max);
 return (0);
 }

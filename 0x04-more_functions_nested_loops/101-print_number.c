@@ -1,4 +1,4 @@
-#include "holberton.c"
+#include "holberton.h"
 /**
  * print_number - print integers
  * @n: integers to be tested
