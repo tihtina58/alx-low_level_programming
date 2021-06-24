@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <math.h>
 /**
  * main -find max prime factor
  * Return: 0
  */
 int main(void)
 {
-int i = 612852475143;
+unsigned int long i = 612852475143;
 int n, max = -1;
 while (i % 2 == 0)
 {
