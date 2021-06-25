@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 /**
- * main -find max prime factor
+ * main - find max prime factor
  * Return: 0
  */
 int main(void)
@@ -13,7 +13,7 @@ while (i % 2 == 0)
 max = 2;
 i = i / 2; 
 }
-for (n=3; n <= sqrt(i); n = n + 2)
+for (n = 3; n <= sqrt(i); n = n + 2)
 {
 while (i % n == 0)
 {

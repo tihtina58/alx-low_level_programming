@@ -1,26 +1,25 @@
 #include "holberton.h"
 /**
  * more_numbers - print 0 to 14 10 times
- * Return: none
+ * Return: void
  */
 void more_numbers(void)
 {
-int num = 0, count = 1;
-while (count <= 10)
+int i, j;
+for (i = 1; i <= 10; i++)
 {
-while (num <= 14)
+for (j = 0; j <= 14; j++)
 {
-if (num >= 10)
+if (j < 10)
 {
-_putchar((num / 10) + '0');
+_putchar(j + '0');
 }
 else
 {
-_putchar((num % 10) + '0');
+_putchar((j / 10) + '0');
+_putchar((j % 10) + '0');
 }
-num++;
 }
-count++;
 _putchar('\n');
 }
 }
