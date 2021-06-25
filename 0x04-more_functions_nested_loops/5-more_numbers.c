@@ -5,21 +5,22 @@
  */
 void more_numbers(void)
 {
-int i, c;
-for (i = 1; i <= 10; i++)
+int num = 0, count = 1;
+while (count <= 10)
 {
-for (c = 0; c <= 14; c++)
+while (num <= 14)
 {
-if (c >= 10)
+if (num >= 10)
 {
-_putchar((c / 10) + '0');
-_putchar((c % 10) + '0');
+_putchar((num / 10) + '0');
 }
 else
 {
-_putchar(c + '0');
+_putchar((num % 10) + '0');
 }
+num++;
 }
+count++;
 _putchar('\n');
 }
 }
