@@ -1,0 +1,6 @@
+#include "holberton.h"
+/**
+ * _strlen - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
