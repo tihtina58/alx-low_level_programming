@@ -18,4 +18,4 @@ index++;
 }
 dest[index] = '\0';
 return (dest);
-} 
+}
