@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *  strcat - concatenates two strings.
+ * _strcat - concatenates two strings.
  * @dest: char parameter
  * @src: char parameter
  * Return: dest char value
