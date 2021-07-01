@@ -24,6 +24,7 @@ if (*(str + i - 1) == a[j])
 *(str + i) -= 32;
 }
 }
+}
 i++;
 }
 return (str);

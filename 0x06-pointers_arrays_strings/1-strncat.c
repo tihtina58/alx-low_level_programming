@@ -13,11 +13,16 @@ int i, j;
 
 i = j = 0;
 while (*(dest + i))
-i++;
-while ((*(dest + i) = *(src + j)) && n >= i)
 {
+i++;
+}
+while (n > j && *(src + j))
+{
+*(dest + i) = *(src + j);
 i++;
 j++;
 }
+if (j < n)
+*(dest + i) = *(src + j);
 return (dest);
 }
