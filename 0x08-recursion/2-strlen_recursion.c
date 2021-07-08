@@ -1,8 +1,8 @@
- #include “holberton.h”
+#include "holberton.h"
 /**
- * _strlen_recursion – prints the length of a string 
- * @s: pointer of a string to be tested
- * Return: the length of a string 
+ * _strlen_recursion - returns the length of a string
+* @s: pointer of a string to be tested
+* Return: string length
  */
 int _strlen_recursion(char *s)
 {

@@ -1,8 +1,8 @@
- #include “holberton.h”
+#include "holberton.h"
 /**
- * factorial – prints factorial of a given number
- * @n: integer number to be tested 
- * Return: factorial of a given number
+ * factorial - returns the factorial of a given number
+ * @n: integer to take factorial of
+* Return: factorial of a given number
  */
 int factorial(int n)
 {

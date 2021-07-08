@@ -1,11 +1,4 @@
- #include “holberton.h”
-/**
- * _sqrt_recursion – prints natural square root of a number
- * @n: integer number to be tested 
- * Return: -1 or the natural square root of a number
- */
 #include "holberton.h"
-
 /**
  * sqrt_check - checks for the square root of c
  * @g:guess at sqrt
