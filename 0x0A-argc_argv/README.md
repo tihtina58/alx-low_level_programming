@@ -1,0 +1,1 @@
+read argv and argc
