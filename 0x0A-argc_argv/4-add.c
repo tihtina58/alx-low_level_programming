@@ -28,19 +28,19 @@ return (1);
  */
 int main(int argc, char *argv[])
 {
-  int sum = 0, i;
-  for (i = 1; i < argc; i++)
-    {
-      if (checkint(argv[i]))
-	{
-	  sum += atoi(argv[i]);
-	}
-      else
-	{
-	  printf("%s\n", "Error");
-	  return (1);
-	}
-    }
-  printf("%d\n", sum);
-  return (0);
+int sum = 0, i;
+for (i = 1; i < argc; i++)
+{
+if (checkint(argv[i]))
+{
+sum += atoi(argv[i]);
+}
+else
+{
+printf("%s\n", "Error");
+return (1);
+}
+}
+printf("%d\n", sum);
+return (0);
 }
