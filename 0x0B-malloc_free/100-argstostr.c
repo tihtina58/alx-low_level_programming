@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "holberton.h"
 
@@ -8,12 +9,10 @@
  */
 int _strlen(char *s)
 {
-  int len = 0;
-
-  while (*s++)
-    len++;
-
-  return (len);
+int len = 0;
+while (*s++)
+len++;
+return (len);
 }
 
 /**
@@ -24,30 +23,29 @@ int _strlen(char *s)
  */
 char *argstostr(int ac, char **av)
 {
-  int i, j, len, total;
-  int m = 0;
-  char *ptr;
-
-  if (!ac || !av)
-    return (NULL);
-  total = 0;
-  for (i = 0; i < ac; i++)
-    {
-      len = _strlen(av[i]) + 1;
-      total += len;
-    }
-  ptr = malloc(sizeof(char) * total + 1);
-  if (!ptr)
-    return (NULL);
-  for (i = 0; i < ac; i++)
-    {
-      len = _strlen(av[i]);
-      for (j = 0; j < len; j++, m++)
-	{
-	  ptr[m] = av[i][j];
-	}
-      ptr[m++] = '\n';
-    }
-  ptr[m] = '\0';
-  return (ptr);
+int i, j, len, total;
+int m = 0;
+char *ptr;
+if (!ac || !av)
+return (NULL);
+total = 0;
+for (i = 0; i < ac; i++)
+{
+len = _strlen(av[i]) + 1;
+total += len;
+}
+ptr = malloc(sizeof(char) * total + 1);
+if (!ptr)
+return (NULL);
+for (i = 0; i < ac; i++)
+{
+len = _strlen(av[i]);
+for (j = 0; j < len; j++, m++)
+{
+ptr[m] = av[i][j];
+}
+ptr[m++] = '\n';
+}
+ptr[m] = '\0';
+return (ptr);
 }
