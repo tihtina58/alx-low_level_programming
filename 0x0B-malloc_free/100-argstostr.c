@@ -1,47 +1,53 @@
+#include <stdio.h>
 #include "holberton.h"
-#include <stdlib.h>
 
 /**
- * argstostr - Creates a string from the concatenation of all the
- * arguments of a program
- * @ac: The number of arguments to the program
- * @av: The array of arguments to the program
- *
- * Return: The pointer to the string or NULL if memory allocation
- * fails or ac is 0 or av is NULL
+ * _strlen - returns the length of a string
+ * @s: string s
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+  int len = 0;
+
+  while (*s++)
+    len++;
+
+  return (len);
+}
+
+/**
+ * argstostr - concatenates all the arguments of your program
+ * @ac: argument count
+ * @av: argument vector
+ * Return: concatenated string
  */
 char *argstostr(int ac, char **av)
 {
-  int i, j;
-  char *str;
-  int len = 0;
+  int i, j, len, total;
+  int m = 0;
+  char *ptr;
 
-  if (ac == 0 || av == NULL)
+  if (!ac || !av)
+    return (NULL);
+  total = 0;
+  for (i = 0; i < ac; i++)
+    {
+      len = _strlen(av[i]) + 1;
+      total += len;
+    }
+  ptr = malloc(sizeof(char) * total + 1);
+  if (!ptr)
     return (NULL);
   for (i = 0; i < ac; i++)
     {
-      for (j = 0; *(*(av + i) + j) != '\0'; j++)
-	len++;
-    }
-  str = malloc(sizeof(char) * (len + i + 1));
-  if (str)
-    {
-      len = 0;
-      for (i = 0; i < ac; i++)
+      len = _strlen(av[i]);
+      for (j = 0; j < len; j++, m++)
 	{
-	  for (j = 0; *(*(av + i) + j) != '\0'; j++)
-	    {
-	      *(str + len) = *(*(av + i) + j);
-	      len++;
-	    }
-	  *(str + len) = '\n';
-	  len++;
+	  ptr[m] = av[i][j];
 	}
-      *(str + len) = '\0';
-      return (str);
+      ptr[m++] = '\n';
     }
-  else
-    {
-      return (NULL);
-    }
+  ptr[m] = '\0';
+  return (ptr);
 }
