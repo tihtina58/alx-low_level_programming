@@ -1,40 +1,49 @@
 #include <stdlib.h>
+#include "holberton.h"
+/**
+ * _strlen - returns the length of a string
+ * @s: string s
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+int length = 0;
+while (*s)
+{
+s++;
+length++;
+}
+return (length);
+}
 /**
  * str_concat - concatenates two strings
- * @s1: string 1 pointer
- * @s2: string 2 pointer
- * Return: null or pointer
+ * @s1: first string
+ * @s2: second string
+ * Return: concatenated strings
  */
 char *str_concat(char *s1, char *s2)
 {
-char *ar;
-unsigned int size1, size2, i, j;
-i = j = size1 = size2 = 0;
-while (s1[size1] != '\0')
-size1++;
-while (s2[size2] != '\0')
-size2++;
-size2++;
+char *cat, *_cat;
 if (s1 == NULL)
-size1 = 0;
+s1 = "";
 if (s2 == NULL)
-size2 = 0;
-ar = malloc(sizeof(*s1) * (size1 + size2));
-if (ar == NULL)
+s2 = "";
+cat = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)) + 1);
+if (!cat)
 return (NULL);
-else
+_cat = cat;
+while (*s1)
 {
-while (i < size1)
+*_cat = *s1;
+_cat++;
+s1++;
+}
+while (*s2)
 {
-ar[i] = s1[i];
-i++;
+*_cat = *s2;
+_cat++;
+s2++;
 }
-while (j <= size2)
-{
-ar[i] = s2[j];
-i++;
-j++;
-}
-return (ar);
-}
+*_cat = '\0';
+return (cat);
 }
