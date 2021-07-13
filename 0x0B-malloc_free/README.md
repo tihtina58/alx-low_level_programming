@@ -1,0 +1,1 @@
+AuTOMaTic AND dynAMic mEMOrY alloCATIon
