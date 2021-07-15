@@ -1,41 +1,44 @@
 #include "holberton.h"
+#include <stdlib.h>
+
 /**
- * string_nconcat - copy a string.
- * a blank line
- *@s1: the first string
- *@s2: the second string
- *@n: the number of bytes
- * Description: copy a string)?
- * section header: the header of this function is holberton.h)*
- * Return: returns a pointer to a char..
+ * string_nconcat - Concatenates two strings using at
+ *                  most an inputted number of bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate to s1.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-  char *p;
-  unsigned int i, j, k, l;
+  char *concat;
+  unsigned int len = n, index;
 
+  if (s1 == NULL)
+    s1 = "";
 
-  i = 0, l = 0;
-  s1 == NULL ? s1 = "" : s1;
-  s2 == NULL ? s2 = "" : s2;
-  while (*(s1 + i) != '\0')
-    i++;
-  while (*(s2 + l) != '\0')
-    l++;
-  if (n >= l)
-    n = l;
+  if (s2 == NULL)
+    s2 = "";
 
-  p = malloc((i + n + 1) * sizeof(char));
-  if (p == NULL)
+  for (index = 0; s1[index]; index++)
+    len++;
+
+  concat = malloc(sizeof(char) * (len + 1));
+
+  if (concat == NULL)
     return (NULL);
-  for (j = 0, k = 0; j < (i + n); j++)
-    {
-      if (j < i)
-	p[j] = s1[j];
-      else
-	p[j] = s2[k++];
-    }
-  p[j] = '\0';
 
-  return (p);
+  len = 0;
+
+  for (index = 0; s1[index]; index++)
+    concat[len++] = s1[index];
+
+  for (index = 0; s2[index] && index < n; index++)
+    concat[len++] = s2[index];
+
+  concat[len] = '\0';
+
+  return (concat);
 }
