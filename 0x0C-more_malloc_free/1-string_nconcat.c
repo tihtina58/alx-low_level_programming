@@ -1,58 +1,50 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _strlen - calculate length of a string
- * @str: string
- * Return: length of the string
+ * string_nconcat - Function that concatenates two strings.
+ * @s1: String 1.
+ * @s2: String 2.
+ * @n: Bytes from s2.
+ *
+ * Return: Pointer to the array or NULL.
  */
-
-int _strlen(char *str)
-{
-  int i;
-
-  for (i = 0; string[i] != '\0'; i++)
-    {
-    }
-  return (i);
-}
-
-/**
- * string_nconcat - concatenate s1 with n char of s2
- * @s1: string 1
- * @s2: string 2
- * @n: number of chars to be concatinated
- * Return: pointer to the concatenated string
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-  char *p;
-  int nn, len, i, j;
-
-  nn = n;
+  char *k;
+  int i;
+  unsigned int j;
 
   if (s1 == NULL)
-    s1 = "";
+    {
+      s1 = "";
+    }
   if (s2 == NULL)
-    s2 = "";
-  if (nn < 0)
-    return (NULL);
-  if (nn >= _strlen(s2))
-    nn = _strlen(s2);
-
-  len = _strlen(s1) + nn + 1;
-
-  p = malloc(sizeof(*p) * len);
-  if (p == NULL)
-    return (NULL);
-
-  for (i = 0; s1[i] != '\0'; i++)
-    p[i] = s1[i];
-  for (j = 0; j < nn; j++)
-    p[i + j] = s2[j];
-  p[i + j] = '\0';
-
-  return (p);
+    {
+      s2 = "";
+    }
+  i = 0;
+  while (s1[i] != '\0')
+    {
+      i++;
+    }
+  k = malloc(sizeof(char) * (i + n + 1));
+  if (k == NULL)
+    {
+      return (NULL);
+    }
+  i = j = 0;
+  while (s1[i] != '\0')
+    {
+      k[i] = s1[i];
+      i++;
+    }
+  while (j < n && s2[j] != '\0')
+    {
+      k[i] = s2[j];
+      i++, j++;
+    }
+  k[i] = '\0';
+  return (k);
 }
