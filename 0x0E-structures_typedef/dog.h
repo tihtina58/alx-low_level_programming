@@ -1,5 +1,5 @@
-#ifndef dog
-#define dog
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - Short description
  * @name: name of the dog
@@ -13,4 +13,7 @@ char *name;
 float age;
 char *owner;
 } my_dog;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif
