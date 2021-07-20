@@ -1,0 +1,17 @@
+#include "function_pointers.h"
+#include <stddef.h>
+/**
+ * print_name - prints a name
+ * @name: string
+ * @f: function
+ */
+void array_iterator(int *array, size_t size, void (*action)(int))
+{
+  int i = 0;
+  while (i < size)
+    {
+      (*action)(*array);
+      i++;
+      array++;
+    }
+}
