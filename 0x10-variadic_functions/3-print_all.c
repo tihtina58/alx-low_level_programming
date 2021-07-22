@@ -26,7 +26,7 @@ printf("%f", va_arg(list, double));
  */
 void print_char(va_list list)
 {
-  printf("%c", va_arg(list, int));
+printf("%c", va_arg(list, int));
 }
 
 /**
