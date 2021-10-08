@@ -1,71 +1,49 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds an element to the hash table.
- * In case of collision, add the new node at the beginning of the list.
- *
- * @ht: is the hash table you want to add or update the key/value to.
- * @key: is the key. key can not be an empty string.
- * @value: is the value associated with the key.
- * value must be duplicated. value can be an empty string.
- *
- * Return: 1 if it succeeded, 0 otherwise.
- */
-
-
+ * hash_table_set - creates the nodes for the hash table
+ * @ht: hash table
+ * @key: the key
+ * @value: the value
+ * Return: bool
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-unsigned long int index = 0;
-hash_node_t **dblptr_node = NULL;
-if (ht == NULL)
+unsigned long int idx = 0;
+hash_node_t *new_table = NULL, *aux_key = NULL;
+if (ht == NULL || key == NULL || strcmp(key, "") == 0)
 return (0);
-if (ht->size == 0 || ht->array == NULL)
-return (0);
-if (*key == '\0')
-return (0);
-index = key_index((const unsigned char *) key, ht->size);
-/* calculate the index */
-dblptr_node = ht->array;
-dblptr_node += index; /* Let's point to the list */
-/* call the function to add the node */
-if (add_hash_node(dblptr_node, key, value) == NULL)
-return (0);
+idx = key_index((const unsigned char *) key, ht->size);
+aux_key = ht->array[idx];
+while (aux_key != NULL)
+{
+if (strcmp(key, aux_key->key) == 0)
+{
+free(aux_key->value);
+aux_key->value = strdup(value);
 return (1);
 }
-
-/**
- * add_hash_node - add a node at the beginning of the list.
- *
- * @head: pointer to head of list.
- * @key: key of hash_node.
- * @value: value of hash_node.
- *
- * Return: pointer to the new element added of NULL if it fails.
- */
-
-hash_node_t *add_hash_node(hash_node_t **head,
-			   const char *key, const char *value)
-{
-hash_node_t *new_node = NULL;
-if (head == NULL || key == NULL || value == NULL)
-return (NULL);
-new_node = malloc(sizeof(hash_node_t));
-if (new_node == NULL)
-return (NULL);
-new_node->key = strdup(key);
-if (new_node->key == NULL)
-{
-free(new_node);
-return (NULL);
+aux_key = aux_key->next;
 }
-new_node->value = strdup(value);
-if (new_node->value == NULL)
+new_table = malloc(sizeof(hash_node_t));
+if (new_table == NULL)
+return (0);
+new_table->key = strdup(key);
+if (new_table->key == NULL)
 {
-free(new_node->key);
-free(new_node);
-return (NULL);
+free(new_table);
+return (0);
 }
-new_node->next = *head;
-(*head) = new_node;
-return (*head);
+new_table->value = strdup(value);
+if (new_table->value == NULL)
+{
+free(new_table->key);
+free(new_table);
+return (0);
+}
+new_table->next = NULL;
+if (ht->array[idx] != NULL)
+new_table->next = ht->array[idx];
+ht->array[idx] = new_table;
+return (1);
 }
